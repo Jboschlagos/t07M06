@@ -12,7 +12,7 @@ const FILE_VENT = path.join(DATA_DIR, 'ventas.json');
 // ── Inicializar Express ────────────────────────────────────
 const app = express();
 app.use(express.json());                                      // leer body JSON
-app.use(express.static(path.join(__dirname, 'public')));     // servir frontend
+app.use(express.static(path.join(__dirname, 'docs')));     // servir frontend
 
 // ── Helpers de File System ─────────────────────────────────
 const leerJson = async (file) => JSON.parse(await fs.readFile(file, 'utf-8'));
