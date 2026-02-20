@@ -1,6 +1,6 @@
 # ✦ Tocar Madera — Backend REST con Node.js/Express
 
-> Artesanía chilena en madera nativa · Módulo 6 · Curso PF1163  
+> Artesanía chilena en madera nativa · Módulo 6 · Curso FullStack JavaScript Profesor: Fabian Torres  
 > Autor: Jorge Bosch | Aprendiz Fullstack Javascript · © 2026
 
 ---
