@@ -1,0 +1,384 @@
+/* ──────────────────────────────────────────
+   Variables y base
+────────────────────────────────────────── */
+:root {
+    --ocre: #c8a96e;
+    --ocre-claro: #e8d5b0;
+    --ocre-suave: #f5ede0;
+    --negro: #1a1a1a;
+    --gris-oscuro: #2d2d2d;
+    --gris-medio: #6b6b6b;
+    --blanco: #fdfaf6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--blanco);
+    font-family: 'Inter', sans-serif;
+    color: var(--negro);
+    line-height: 1.6;
+}
+
+/* ──────────────────────────────────────────
+    Tipografía
+────────────────────────────────────────── */
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+.navbar-brand,
+.hero-titulo,
+.card-nombre,
+.card-precio,
+.modal-title,
+.total-label,
+.footer-brand {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.08em;
+}
+
+/* ──────────────────────────────────────────
+   Navbar
+────────────────────────────────────────── */
+.bg-negro {
+    background-color: var(--negro) !important;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--ocre) !important;
+    letter-spacing: 0.05em;
+}
+
+.brand-icon {
+    color: var(--ocre);
+    margin-right: 4px;
+}
+
+.filtro-select {
+    background-color: var(--gris-oscuro);
+    color: var(--ocre-claro);
+    border: 1px solid var(--ocre);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.filtro-select:focus {
+    box-shadow: 0 0 0 2px var(--ocre);
+    outline: none;
+}
+
+.btn-carrito {
+    background: transparent;
+    border: 1px solid var(--ocre);
+    color: var(--ocre);
+    border-radius: 4px;
+    padding: 4px 14px;
+    font-size: 1rem;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.btn-carrito:hover {
+    background-color: var(--ocre);
+    color: var(--negro);
+}
+
+.badge-carrito {
+    background-color: var(--ocre);
+    color: var(--negro);
+    border-radius: 50%;
+    padding: 1px 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+/* ──────────────────────────────────────────
+   Hero
+────────────────────────────────────────── */
+.hero {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--ocre);
+}
+
+.hero-titulo {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 200;
+    color: var(--ocre-claro);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.hero-titulo {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 300;
+    color: var(--ocre-claro);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+}
+
+.hero-desc {
+    font-size: 1rem;
+    color: #aaa;
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ──────────────────────────────────────────
+   Masonry Grid
+────────────────────────────────────────── */
+.masonry-grid {
+    columns: 3 280px;
+    column-gap: 1.5rem;
+}
+
+/* ──────────────────────────────────────────
+   Tarjeta de producto
+────────────────────────────────────────── */
+.card-madera {
+    break-inside: avoid;
+    background-color: #fff;
+    border: 1px solid var(--ocre-claro);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card-madera:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(200, 169, 110, 0.2);
+}
+
+.card-madera img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.card-body-madera {
+    padding: 1.1rem 1.2rem 1.3rem;
+}
+
+.card-categoria {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ocre);
+    margin-bottom: 4px;
+}
+
+.card-nombre {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--negro);
+    margin-bottom: 2px;
+    line-height: 1.3;
+}
+
+.card-artesano {
+    font-size: 0.8rem;
+    color: var(--gris-medio);
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.card-desc {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 14px;
+    line-height: 1.6;
+}
+
+.card-footer-madera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.card-precio {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--negro);
+}
+
+.btn-agregar {
+    background-color: var(--negro);
+    color: var(--ocre);
+    border: 1px solid var(--negro);
+    border-radius: 4px;
+    padding: 5px 14px;
+    font-size: 0.82rem;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-agregar:hover {
+    background-color: var(--ocre);
+    color: var(--negro);
+    border-color: var(--ocre);
+}
+
+.badge-stock {
+    font-size: 0.72rem;
+    color: var(--gris-medio);
+    margin-top: 6px;
+    display: block;
+}
+
+/* ──────────────────────────────────────────
+   Modal carrito
+────────────────────────────────────────── */
+.modal-madera .modal-header {
+    background-color: var(--negro);
+    color: var(--ocre);
+    border-bottom: 1px solid var(--ocre);
+}
+
+.modal-madera .modal-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+}
+
+.modal-madera .modal-footer {
+    background-color: var(--ocre-suave);
+    border-top: 1px solid var(--ocre-claro);
+}
+
+.total-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--negro);
+}
+
+.btn-comprar {
+    background-color: var(--negro);
+    color: var(--ocre);
+    border: none;
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    transition: all 0.2s;
+}
+
+.btn-comprar:hover {
+    background-color: var(--ocre);
+    color: var(--negro);
+}
+
+/* Item del carrito */
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--ocre-claro);
+    font-size: 0.9rem;
+}
+
+.item-carrito:last-child {
+    border-bottom: none;
+}
+
+.item-nombre {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.item-precio {
+    color: var(--gris-medio);
+    font-size: 0.85rem;
+}
+
+.btn-quitar {
+    background: none;
+    border: none;
+    color: #c0392b;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0 6px;
+    transition: transform 0.15s;
+}
+
+.btn-quitar:hover {
+    transform: scale(1.2);
+}
+
+/* ──────────────────────────────────────────
+   Footer
+────────────────────────────────────────── */
+.footer {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 40px 20px;
+    margin-top: 4rem;
+    border-top: 2px solid var(--ocre);
+}
+
+.footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: var(--ocre);
+    margin-bottom: 6px;
+}
+
+.footer-sub {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-bottom: 6px;
+}
+
+.footer-autor {
+    font-size: 0.78rem;
+    color: #666;
+    margin: 0;
+}
+
+/* ──────────────────────────────────────────
+   Responsivo
+────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .masonry-grid {
+        columns: 2 220px;
+    }
+
+    .hero-titulo {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .masonry-grid {
+        columns: 1;
+    }
+
+    .hero {
+        padding: 50px 16px;
+    }
+}

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tocar Madera | Artesanía Chilena en Madera</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Google Fonts: Cormorant Garamond -->
+    <!-- Google Fonts: Raleway -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <!-- ── NAVBAR ───────────────────────────────────────────── -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-negro sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="brand-icon">✦</span> Tocar Madera
+            </a>
+            <div class="d-flex align-items-center gap-3">
+                <!-- Filtro categoría -->
+                <select class="form-select form-select-sm filtro-select" id="filtroCat">
+                    <option value="todos">Todos</option>
+                    <option value="cocina">Cocina</option>
+                    <option value="decoracion">Decoración</option>
+                </select>
+                <!-- Carrito -->
+                <button class="btn btn-carrito" id="btnCarrito">
+                    🛒 <span class="badge-carrito" id="badgeCarrito">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ── HERO ─────────────────────────────────────────────── -->
+    <header class="hero">
+        <div class="container text-center">
+            <p class="hero-sub">Artesanía chilena hecha a mano</p>
+            <h1 class="hero-titulo">Tocar Madera</h1>
+            <p class="hero-desc">
+                Piezas únicas talladas por artesanos del sur de Chile.<br />
+                Cada objeto lleva el nombre de quien lo hizo.
+            </p>
+        </div>
+    </header>
+
+    <!-- ── PRODUCTOS ────────────────────────────────────────── -->
+    <main class="container my-5">
+        <div class="masonry-grid" id="gridProductos">
+            <!-- Las tarjetas se generan con JavaScript -->
+        </div>
+    </main>
+
+    <!-- ── MODAL CARRITO ────────────────────────────────────── -->
+    <div class="modal fade" id="modalCarrito" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content modal-madera">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tu carrito</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="cuerpoCarrito">
+                    <p class="text-muted text-center">Tu carrito está vacío.</p>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <span class="total-label">Total: <strong id="totalCarrito">$0</strong></span>
+                    <button class="btn btn-comprar" id="btnComprar">
+                        Comprar ahora
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── TOAST CONFIRMACIÓN ───────────────────────────────── -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="toastConfirm" class="toast align-items-center text-white bg-success border-0" role="alert">
+            <div class="d-flex">
+                <div class="toast-body" id="toastMsg">
+                    ¡Compra realizada con éxito!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── FOOTER ───────────────────────────────────────────── -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p class="footer-brand">✦ Tocar Madera</p>
+            <p class="footer-sub">
+                Artesanía chilena en madera nativa · Hecho a mano con amor
+            </p>
+            <p class="footer-autor">
+                Jorge Bosch | Aprendiz Fullstack Javascript · © 2026
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- App JS -->
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

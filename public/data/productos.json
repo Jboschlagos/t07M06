@@ -1,0 +1,102 @@
+[
+    {
+        "id": "1",
+        "nombre": "Bandeja de Alerce Patagónico",
+        "artesano": "Rosa Antimán, Osorno",
+        "precio": 28900,
+        "stock": 8,
+        "descripcion": "Bandeja tallada a mano en alerce centenario, con terminación en aceite de linaza. Pieza única con vetas naturales.",
+        "imagen": "https://images.unsplash.com/photo-1635083880418-d4d3fc2c61a0?w=600&q=80",
+        "categoria": "cocina"
+    },
+    {
+        "id": "2",
+        "nombre": "Cuenco Torneado en Raulí",
+        "artesano": "Pedro Llanquimán, Valdivia",
+        "precio": 19500,
+        "stock": 12,
+        "descripcion": "Cuenco torneado artesanalmente en madera de raulí nativo. Ideal para frutas o decoración.",
+        "imagen": "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=600&q=80",
+        "categoria": "cocina"
+    },
+    {
+        "id": "3",
+        "nombre": "Tabla de Picar Mañío",
+        "artesano": "Carlos Fierro, Puerto Montt",
+        "precio": 34000,
+        "stock": 6,
+        "descripcion": "Tabla de picar en mañío con mango ergonómico. Madera dura y resistente, antibacteriana natural.",
+        "imagen": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=600&q=80",
+        "categoria": "cocina"
+    },
+    {
+        "id": "4",
+        "nombre": "Lámpara de Mesa Lenga",
+        "artesano": "Ana Huenchumán, Temuco",
+        "precio": 67000,
+        "stock": 4,
+        "descripcion": "Lámpara de mesa torneada en lenga patagónica. Diseño minimalista con luz cálida difusa.",
+        "imagen": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&q=80",
+        "categoria": "decoracion"
+    },
+    {
+        "id": "5",
+        "nombre": "Portavelas Trío Coigüe",
+        "artesano": "Luis Nahuelpán, Pucón",
+        "precio": 22500,
+        "stock": 15,
+        "descripcion": "Set de tres portavelas tallados en coigüe del sur. Alturas escalonadas para efecto visual.",
+        "imagen": "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=600&q=80",
+        "categoria": "decoracion"
+    },
+    {
+        "id": "6",
+        "nombre": "Caja Joyero Olivillo",
+        "artesano": "María Cárdenas, Castro",
+        "precio": 41000,
+        "stock": 5,
+        "descripcion": "Caja joyero con tapa deslizante tallada en olivillo chileno. Interior forrado en tela de lana.",
+        "imagen": "https://images.unsplash.com/photo-1609709295948-17d77cb2a69b?w=600&q=80",
+        "categoria": "decoracion"
+    },
+    {
+        "id": "7",
+        "nombre": "Mortero y Mano Espino",
+        "artesano": "Jorge Reyes, Colchagua",
+        "precio": 31500,
+        "stock": 9,
+        "descripcion": "Mortero y mano tallados en espino chileno, madera durísima ideal para moler especias.",
+        "imagen": "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&q=80",
+        "categoria": "cocina"
+    },
+    {
+        "id": "8",
+        "nombre": "Marco Fotografía Pellín",
+        "artesano": "Sofía Millán, Angol",
+        "precio": 18000,
+        "stock": 20,
+        "descripcion": "Marco para fotografía 15x20 tallado en pellín con detalles geométricos mapuche.",
+        "imagen": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=600&q=80",
+        "categoria": "decoracion"
+    },
+    {
+        "id": "9",
+        "nombre": "Especiero de Pared Tiaca",
+        "artesano": "Roberto Painecura, Villarrica",
+        "precio": 52000,
+        "stock": 7,
+        "descripcion": "Especiero de pared con seis frascos incluidos, tallado en tiaca. Se fija con sistema oculto.",
+        "imagen": "https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?w=600&q=80",
+        "categoria": "cocina"
+    },
+    {
+        "id": "10",
+        "nombre": "Reloj de Pared Araucaria",
+        "artesano": "Elena Queupumil, Curacautín",
+        "precio": 78000,
+        "stock": 3,
+        "descripcion": "Reloj de pared tallado en araucaria con mecanismo silencioso. Diámetro 40cm, pieza de autor.",
+        "imagen": "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?w=600&q=80",
+        "categoria": "decoracion"
+    }
+]
