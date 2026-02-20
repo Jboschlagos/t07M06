@@ -1,3 +1,7 @@
+// ── Detectar entorno ──────────────────────────────────────
+const EN_GITHUB_PAGES = window.location.hostname.includes('github.io');
+const URL_PRODUCTOS = EN_GITHUB_PAGES ? './data/productos.json' : '/productos';
+
 // ── Estado global ──────────────────────────────────────────
 let carrito = [];
 let productos = [];
@@ -35,10 +39,10 @@ const renderProductos = (lista) => {
   `).join('');
 };
 
-// ── Cargar productos desde la API ──────────────────────────
+// ── Cargar productos desde la API o JSON estático ─────────
 const cargarProductos = async () => {
     try {
-        const res = await fetch('/productos');
+        const res = await fetch(URL_PRODUCTOS);
         productos = await res.json();
         renderProductos(productos);
     } catch (error) {
@@ -123,6 +127,15 @@ document.getElementById('btnCarrito').addEventListener('click', () => {
 document.getElementById('btnComprar').addEventListener('click', async () => {
     if (carrito.length === 0) return;
 
+    // En GitHub Pages no hay backend disponible
+    if (EN_GITHUB_PAGES) {
+        document.getElementById('toastMsg').textContent =
+            '⚠️ Demo visual — el backend debe ejecutarse localmente con npm run dev';
+        const toast = new bootstrap.Toast(document.getElementById('toastConfirm'));
+        toast.show();
+        return;
+    }
+
     try {
         const payload = {
             carrito: carrito.map(i => ({ id: i.id, cantidad: i.cantidad }))
@@ -137,18 +150,15 @@ document.getElementById('btnComprar').addEventListener('click', async () => {
         const data = await res.json();
 
         if (res.ok) {
-            // Vaciar carrito y actualizar vista
             carrito = [];
             actualizarBadge();
             bootstrap.Modal.getInstance(document.getElementById('modalCarrito')).hide();
 
-            // Mostrar toast de éxito
             document.getElementById('toastMsg').textContent =
                 `¡Compra exitosa! Total: ${formatPrecio(data.total)}`;
             const toast = new bootstrap.Toast(document.getElementById('toastConfirm'));
             toast.show();
 
-            // Recargar productos para ver stock actualizado
             await cargarProductos();
 
         } else {
