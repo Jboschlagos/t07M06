@@ -21,22 +21,22 @@ const renderProductos = (lista) => {
 
     grid.innerHTML = lista.map(p => `
     <div class="card-madera">
-      <img src="${p.imagen}" alt="${p.nombre}" loading="lazy">
-      <div class="card-body-madera">
+        <img src="${p.imagen}" alt="${p.nombre}" loading="lazy">
+        <div class="card-body-madera">
         <p class="card-categoria">${p.categoria}</p>
         <h3 class="card-nombre">${p.nombre}</h3>
         <p class="card-artesano">por ${p.artesano}</p>
         <p class="card-desc">${p.descripcion}</p>
         <div class="card-footer-madera">
-          <span class="card-precio">${formatPrecio(p.precio)}</span>
-          <button class="btn-agregar" onclick="agregarAlCarrito('${p.id}')">
+            <span class="card-precio">${formatPrecio(p.precio)}</span>
+            <button class="btn-agregar" onclick="agregarAlCarrito('${p.id}')">
             + Agregar
-          </button>
+            </button>
         </div>
         <span class="badge-stock">${p.stock} disponibles</span>
-      </div>
+        </div>
     </div>
-  `).join('');
+    `).join('');
 };
 
 // ── Cargar productos desde la API o JSON estático ─────────
@@ -101,16 +101,16 @@ const renderCarrito = () => {
 
     cuerpo.innerHTML = carrito.map(i => `
     <div class="item-carrito">
-      <div>
+        <div>
         <p class="item-nombre">${i.nombre}</p>
         <p class="item-precio">${formatPrecio(i.precio)} × ${i.cantidad}</p>
-      </div>
-      <div class="d-flex align-items-center gap-2">
+        </div>
+        <div class="d-flex align-items-center gap-2">
         <span>${formatPrecio(i.precio * i.cantidad)}</span>
         <button class="btn-quitar" onclick="quitarDelCarrito('${i.id}')">✕</button>
-      </div>
+        </div>
     </div>
-  `).join('');
+    `  ).join('');
 
     const total = carrito.reduce((acc, i) => acc + i.precio * i.cantidad, 0);
     totalEl.textContent = formatPrecio(total);
